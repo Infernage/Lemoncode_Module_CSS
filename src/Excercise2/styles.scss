@@ -1,0 +1,45 @@
+@import "themes/theme-1";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+}
+
+.box {
+  color: black;
+  height: 100px;
+  width: 100px;
+  border: black solid 1px;
+  display: flex;
+  align-items: center;
+  
+  &.box-shadow {
+    box-shadow: var(--shadow);
+  }
+}
+
+.base-color {
+  background-color: var(--base-color);
+}
+
+.important-color {
+  background-color: darken($base-color, 20%);
+}
+
+.warning-color {
+  background-color: lighten($base-color, 20%);
+}
+
+.color-box-text {
+  text-align: center;
+  width: 100%;
+  font-family: var(--main-font);
+
+  &.alternative-font {
+    font-family: var(--secondary-font);
+  }
+}

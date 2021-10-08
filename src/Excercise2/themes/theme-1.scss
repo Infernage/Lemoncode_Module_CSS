@@ -1,0 +1,10 @@
+﻿$base-color: red;
+$main-font: Copperplate,fantasy;
+$secondary-font: Arial, Helvetica,sans-serif;
+
+:root {
+  --base-color: #{$base-color};
+  --main-font: #{$main-font};
+  --secondary-font: #{$secondary-font};
+  --shadow: -10px 10px 15px;
+}

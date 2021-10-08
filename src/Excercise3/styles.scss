@@ -1,0 +1,39 @@
+$base-color: darkcyan;
+
+:root {
+  --base-color: #{$base-color};
+  --text-color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: var(--base-color);
+}
+
+@media screen and (max-width: 320px) {
+  .navbar {
+    flex-direction: column;
+  }
+  
+  .color-box-text {
+    width: 100%;
+  }
+}
+
+.box {
+  height: 50px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  
+  &:hover {
+    background-color: darken($base-color, 10%);
+  }
+}
+
+.color-box-text {
+  color: var(--text-color);
+  text-align: center;
+}

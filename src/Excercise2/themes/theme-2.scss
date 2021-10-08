@@ -1,0 +1,10 @@
+﻿$base-color: darkcyan;
+$main-font: Arial, Helvetica, sans-serif;
+$secondary-font: Copperplate, fantasy;
+
+:root {
+  --base-color: #{$base-color};
+  --main-font: #{$main-font};
+  --secondary-font: #{$secondary-font};
+  --shadow: 10px 10px 15px;
+}
