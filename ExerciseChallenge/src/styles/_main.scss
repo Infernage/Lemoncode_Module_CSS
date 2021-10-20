@@ -1,0 +1,74 @@
+@use 'variables';
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  @keyframes expand {
+    100% {
+      transform: scale(1.2);
+    }
+  }
+
+  .section-title {
+    font-size: larger;
+
+    #top-text {
+      font-weight: bolder;
+
+      &:before {
+        content: "5";
+
+        @media screen and (max-width: variables.$tablet-size){
+          content: "3";
+        }
+      }
+    }
+  }
+
+  .top {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+
+    @media screen and (max-width: variables.$mobile-size) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .first, .second {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .item {
+    min-width: 250px;
+    flex: 1;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    &:hover {
+      animation: expand 0.2s;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  .top-item {
+    min-width: 225px;
+
+    @media screen and (max-width: variables.$tablet-size) {
+      &:nth-child(1), &:nth-child(2) {
+        display: none;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

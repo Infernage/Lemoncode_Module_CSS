@@ -1,0 +1,43 @@
+@use 'variables';
+
+header {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-color: var(--background);
+
+
+  .header-logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      padding: 20px;
+    }
+
+    .platform-title {
+      @media screen and (max-width: variables.$tablet-size) {
+        display: none;
+      }
+
+      font-size: x-large;
+    }
+  }
+
+  .header-buttons {
+    display: flex;
+    align-items: center;
+    font-size: smaller;
+
+    div {
+      padding: 15px;
+
+      &:hover {
+        background-color: white;
+        color: darkslateblue;
+        font-size: medium;
+      }
+    }
+  }
+}

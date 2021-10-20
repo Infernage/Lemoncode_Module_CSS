@@ -1,0 +1,11 @@
+@use 'styles/variables';
+@use 'styles/header';
+@use 'styles/main';
+
+body {
+  background-color: var(--background);
+  color: white;
+  font-family: Jons;
+  overflow-x: hidden;
+  margin-top: 0;
+}
